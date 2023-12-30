@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai&family=Sarabun&display=swap');
+
+*{
+     font-family: 'Noto Sans Thai', sans-serif;
+     box-sizing: border-box;
+}
+
+body{
+     background-color: antiquewhite;
+     min-height: 100vh;
+     margin: 0;
+     padding-top: 20px;
+     display: flex;
+     justify-content: center;
+}
+
+#box2 {
+     display: none;
+}
+
+#box3 {
+     display: none;
+}
+
+.form{
+     background-color: rgb(254, 254, 254);
+     width: auto;
+     padding: 15px;
+     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px';
+}
+
+.tag-name{
+     display: block;
+     color: black;
+}
+
+.input{
+     border-radius: 5px;
+     border: 1px solid rgb(31, 31, 31);
+     display: block;
+     width: 50%;
+     padding: 6px;
+     margin-bottom: 10px;
+     font-size: 14px;
+     background-color: white;
+     color: black;
+}
+
+.button-changeBox{
+     cursor: pointer;
+     width: 40px;
+     height: 30px;
+     font-size: 20px;
+     background-color: chocolate;
+     color: whitesmoke;
+     border: 1px solid chocolate;
+     border-radius: 2px;
+}
+
+#button-theme{
+     cursor: pointer;
+     width: 155px;
+     height: 25px;
+     font-size: 16px;
+     background-color: saddlebrown;
+     color: whitesmoke;
+     border: 1px solid saddlebrown;
+     border-radius: 5px;
+     margin-bottom: 20px;
+
+}
+
+.box.button{
+     display: block;
+     margin: 10px 0 20px 0;
+}
+
+#error-message{
+     color: tomato;
+     display: inline-block;
+}
+
+h1{
+     color: black;
+}

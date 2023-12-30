@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>คำนวณภาษี</title>
+     <link rel="stylesheet" href="style.css">  
+</head>
+<body>
+     <div class="form">
+          <h1>โปรแกรมคำนวณภาษีเงินได้บุคคลธรรมดา</h1>
+          <button id="button-theme">Toggle dark mode</button>
+
+          <div class="box" id="box1">
+               <label class="tag-name" for="income">รายได้ (บาท)</label>
+               <input type="number" name="income" class="income input">
+          </div>
+          
+          <div class="box" id="box2">
+               <input type="number" name="income" class="income input">
+          </div>
+          
+          <div class="box" id="box3">
+               <input type="number" name="income" class="income input">
+          </div>
+          
+          <div class="box button">
+               <button id="plus" class="button-changeBox">+</button>
+               <button id="minus" class="button-changeBox">-</button>
+          </div>
+
+          <div class="box">
+               <label class="tag-name" for="allIncome">รายได้รวม (บาท)</label>
+               <input type="number" name="allIncome" id="allIncome" class="input" value="" readonly>
+          </div>
+
+          <div class="box">
+               <label class="tag-name" for="tax-rate">อัตราภาษี (%)</label>
+               <input type="number" name="tax-rate" id="tax-rate" class="input" value="" readonly>
+          </div>
+
+          <div class="box">
+               <label class="tag-name" for="tax">ภาษีที่ต้องจ่าย (บาท)</label>
+               <input type="number" name="tax" id="tax" class="input" value="" readonly>
+          </div>
+
+          <div class="box">
+               <small id="error-message"></small>
+          </div>
+          
+     </div>
+
+     <script src="script.js"></script>
+</body>
+</html>

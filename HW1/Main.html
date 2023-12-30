@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <title>CSS Template</title>
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="stylesheet" href="color.css">
+     <link href="https://fonts.googleapis.com/css2?family=Sarabun&display=swap" rel="stylesheet">
+     <style>
+          /* Add CSS here if u want */
+     </style>
+     <script>
+          const contentData = [{
+                    title: "กรุงเทพมหานคร",
+                    content: "กรุงเทพมหานคร เป็นเมืองหลวงและนครที่มีประชากรมากที่สุดของประเทศไทย เป็นศูนย์กลางการปกครอง การศึกษา การคมนาคมขนส่ง การเงินการธนาคาร การพาณิชย์ การสื่อสาร และความเจริญของประเทศ ตั้งอยู่บนสามเหลี่ยมปากแม่น้ำเจ้าพระยา มีแม่น้ำเจ้าพระยาไหลผ่านและแบ่งเมืองออกเป็น 2 ฝั่ง คือ ฝั่งพระนครและฝั่งธนบุรี กรุงเทพมหานครมีพื้นที่ทั้งหมด 1,568.737 ตร.กม. มีประชากรตามทะเบียนราษฎรกว่า 6 ล้านคน ทำให้กรุงเทพมหานครจัดเป็นเอกนคร (Primate City) มีผู้กล่าวว่า กรุงเทพมหานครเคยเป็น เอกนครที่สุดในโลก เพราะในปี พ.ศ. 2543 (ค.ศ. 2000) กรุงเทพมหานครมีประชากรมากกว่านครราชสีมา ที่เคยมีประชากรมากเป็นอันดับ 2 ของประเทศไทย ถึง 40 เท่า[4] และในปัจจุบันนี้ กรุงเทพมหานครใหญ่กว่าเมืองอันดับสองอย่างเชียงใหม่ถึง 9 เท่า"
+               },
+               {
+                    title: "นนทบุรี",
+                    content: "นนทบุรี เป็นจังหวัดหนึ่งในภาคกลางของประเทศไทย จัดตั้งขึ้นครั้งล่าสุดโดยพระราชบัญญัติจัดตั้งจังหวัดสมุทรปราการ จังหวัดนนทบุรี จังหวัดสมุทรสาคร และจังหวัดนครนายก พุทธศักราช 2489 ซึ่งมีผลใช้บังคับตั้งแต่วันที่ 9 พฤษภาคม พ.ศ. 2489 ปัจจุบัน จังหวัดนนทบุรีจัดเป็นพื้นที่ในเขตปริมณฑลของกรุงเทพมหานคร มีขนาดเนื้อที่ใหญ่เป็นอันดับที่ 75 ของประเทศ (รวมกรุงเทพมหานคร) แต่มีประชากรหนาแน่นที่สุดเป็นอันดับที่ 2 รองจากกรุงเทพมหานคร"
+               },
+               {
+                    title: "สมุทรปราการ",
+                    content: "สมุทรปราการ เป็นจังหวัดหนึ่งในภาคกลางของประเทศไทย และยังเป็นจังหวัดในเขตปริมณฑลของกรุงเทพมหานคร จัดตั้งขึ้นครั้งล่าสุดโดย พระราชบัญญัติจัดตั้งจังหวัดสมุทรปราการ จังหวัดนนทบุรี จังหวัดสมุทรสาคร และจังหวัดนครนายก พุทธศักราช 2489 ซึ่งมีผลใช้บังคับตั้งแต่วันที่ 9 พฤษภาคม พ.ศ. 2489 ในด้านเศรษฐกิจ จังหวัดสมุทรปราการมีการทำนา, ประมง และอุตสาหกรรม แหล่งท่องเที่ยวและสถานที่สำคัญ เช่น ท่าอากาศยานสุวรรณภูมิ, พระสมุทรเจดีย์กลางน้ำ, วัดอโศการาม, วัดบางพลีใหญ่, วัดไพชยนต์พลเสพราชวรวิหาร, วัดโปรดเกศเชษฐาราม, ศาลพระเสื้อเมือง, พิพิธภัณฑ์ทหารเรือ, เมืองโบราณ, สถานตากอากาศบางปู, ป้อมพระจุลจอมเกล้า, สวางคนิวาส, ป้อมแผลงไฟฟ้า, ฟาร์มจระเข้ ฯลฯ"
+               }
+          ];
+
+          function changeBackgroundColor() {
+
+               const elementsToChange = document.querySelectorAll("body, header,footer");
+               const rainbowColors = ["#FF0000", "#FF7F00", "#FFFF00", "#00FF00", "#0000FF", "#4B0082", "#9400D3"];
+               let currentIndex = 0;
+
+               setInterval(() => {
+                    elementsToChange.forEach(element => {
+                         element.style.backgroundColor = rainbowColors[currentIndex];
+                    });
+                    currentIndex = (currentIndex + 1) % rainbowColors.length;
+               }, 500);
+
+          }
+
+          function changeArticleContent(index) {
+               const article = document.querySelector("article");
+               article.innerHTML = `<h1>${contentData[index].title}</h1><p>${contentData[index].content}</p>`;
+          }
+
+          function playHiddenAudio() {
+               const audioPlayer = document.getElementById("hiddenPlayer");
+               audioPlayer.play();
+          }
+     </script>
+</head>
+
+<body onload="changeBackgroundColor(),changeArticleContent(0)">
+     <header>
+          <h2>ที่นี่ประเทศไทย</h2>
+     </header>
+
+     <section>
+          <nav>
+               <ul>
+                    <li><a href="#" onclick="changeArticleContent(0),playHiddenAudio()">กรุงเทพมหานคร</a></li>
+                    <li><a href="#" onclick="changeArticleContent(1),playHiddenAudio()">นนทบุรี</a></li>
+                    <li><a href="#" onclick="changeArticleContent(2),playHiddenAudio()">สมุทรปราการ</a></li>
+               </ul>
+          </nav>
+
+          <article>
+               <!-- it dynamically updated bro-->
+          </article>
+     </section>
+
+     <footer>
+          <p>Alt+F4, Dewoi, Kati_Peace, Lachesis</p>
+          <div class="hiddenPlayer">
+               <audio id="hiddenPlayer" controls preload="none" autoplay>
+                    <source src="https://docs.google.com/uc?export=open&id=1Ll2xfuj-WlPSwc-UexNv5IKRBBrD7vka"
+                         type="audio/mp3">
+               </audio>
+          </div>
+
+     </footer>
+
+</body>
+
+</html>
